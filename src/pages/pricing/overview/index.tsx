@@ -10,7 +10,7 @@ function classNames(...classes) {
 }
 
 export default function Overview() {
-  const [categories] = useState([
+  const categories = [
     {
       id: '应用管理',
       label: '应用管理',
@@ -131,7 +131,7 @@ export default function Overview() {
         '对象存储'
       ]
     }
-  ]);
+  ];
   const [tabIndex, setTabIndex] = useState(0);
   const tabRef = useRef(null); // Create a ref for the Tab component
 
