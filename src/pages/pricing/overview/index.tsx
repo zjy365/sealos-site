@@ -135,20 +135,20 @@ export default function Overview() {
   const [tabIndex, setTabIndex] = useState(0);
   const tabRef = useRef(null); // Create a ref for the Tab component
 
-  useEffect(() => {
-    const numTabs = categories.length;
-    const interval = setInterval(() => {
-      const nextTabIndex = (tabIndex + 1) % numTabs;
-      setTabIndex(nextTabIndex);
-      // Scroll to the new tab's position, not exceeding the width of the previous tab
-      if (tabRef.current) {
-        const tabWidth = tabRef.current.offsetWidth;
-        const scrollLeft = nextTabIndex * tabWidth - tabWidth; // Scroll back by one tab's width
-        tabRef.current.scrollLeft = scrollLeft;
-      }
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [tabIndex]);
+  // useEffect(() => {
+  //   const numTabs = categories.length;
+  //   const interval = setInterval(() => {
+  //     const nextTabIndex = (tabIndex + 1) % numTabs;
+  //     setTabIndex(nextTabIndex);
+  //     // Scroll to the new tab's position, not exceeding the width of the previous tab
+  //     if (tabRef.current) {
+  //       const tabWidth = tabRef.current.offsetWidth;
+  //       const scrollLeft = nextTabIndex * tabWidth - tabWidth; // Scroll back by one tab's width
+  //       tabRef.current.scrollLeft = scrollLeft;
+  //     }
+  //   }, 3000);
+  //   return () => clearInterval(interval);
+  // }, [tabIndex]);
 
   return (
     <div className="mt-56 flex items-center w-full max-w-[1280px] flex-col px-10 lg:mt-20">
