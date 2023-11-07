@@ -1,4 +1,4 @@
-// @ts-check
+require('dotenv').config()
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -12,6 +12,7 @@ const config = {
   customFields: {
     // 把你的自定义环境放在这里
     teamEmail: process.env.EMAIL,
+    test: "xxx"
   },
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
