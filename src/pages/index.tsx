@@ -12,10 +12,15 @@ import HomeUserBy from './components/UserBy';
 import { Helmet } from 'react-helmet';
 import './index.scss';
 import Banner from './components/Banner';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 
 const Home = () => {
   const { screenWidth } = useWindow();
   const isPc = useMemo(() => screenWidth > PC_MIN_WIDTH, [screenWidth]);
+  const {
+    siteConfig: { customFields }
+  } = useDocusaurusContext();
+  console.log(customFields);
 
   const HomeRender = (
     <div id="sealos-layout-wrap-home-page">

@@ -9,7 +9,10 @@ const config = {
   onBrokenLinks: "warn",
   onBrokenMarkdownLinks: "warn",
   favicon: "img/sealos.ico",
-
+  customFields: {
+    // 把你的自定义环境放在这里
+    teamEmail: process.env.EMAIL,
+  },
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
   organizationName: "labring", // Usually your GitHub org/user name.
